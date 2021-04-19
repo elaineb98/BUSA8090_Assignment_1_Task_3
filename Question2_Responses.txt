@@ -1,0 +1,5 @@
+#Part A Code
+mysql> select m.LastName, m.FirstName, m.MemberID from Member m where m.Coach is NULL;
+
+#Part B Code
+mysql> select m.LastName, m.FirstName, m.MemberID from Member m where JoinDate between '2013-01-01' and '2013-12-31';
