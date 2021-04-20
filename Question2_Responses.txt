@@ -3,3 +3,15 @@ mysql> select m.LastName, m.FirstName, m.MemberID from Member m where m.Coach is
 
 #Part B Code
 mysql> select m.LastName, m.FirstName, m.MemberID from Member m where JoinDate between '2013-01-01' and '2013-12-31';
+
+#Part C Code
+mysql> select m.LastName, m.FirstName, m.MemberID
+    -> from (Member m inner join Entry e on m.MemberID=e.MemberID)
+    -> where not exists
+    -> (select * from Entry e
+    -> where e.MemberID=m.MemberID and e.Year=2013);
+
+#Part D Code
+mysql> select m.LastName, m.FirstName, m.MemberID
+    -> from Member m inner join Entry e on m.MemberID=e.MemberID
+    -> where (e.Year=2013, 2014, 2015);
