@@ -1,0 +1,1 @@
+select metabolism, count(*) c from annotation group by metabolism having c > 1;
