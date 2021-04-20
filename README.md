@@ -6,4 +6,4 @@ For Question 1:
 - File duplicate.mysql relates to Part D
 
 For Question 2:
-- File Question2_Responses contained answers for parts A-D
+- File Question2_Responses.txt contained answers for parts A-D
